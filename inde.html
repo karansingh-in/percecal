@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="eg">
+<head>
+<meta>
+
+
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<title>percentage-calculator</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body style="background-color: #DADA !important">
+
+</div>
+
+</footer>
+
+
+
+<div class="container fw-bold">
+<div class="row">
+	<div class="col-8 m-auto bg-dark text-white p-4">
+		<h4 class="text-center">Percentage Calculator </h4>
+		
+	</div>
+	
+</div>
+<div class="row">
+	<div class="col-lg-8 bg-white p-5 col-md-12 m-auto d-flex justify-content-around">
+		<div class="col-md-4">
+			<div>
+<div>
+
+<div class="book1 mb-3">
+<label>Computer</label>
+<input class="form-control"  id="bookone" type="number" name="" placeholder="marks">
+</div>
+
+<div class="bookm1 mb-3">
+<input class="form-control"  id="bookonem" type="number" name="" placeholder="maximum marks">
+</div>
+
+<div class="book2 mb-3">
+<label>English 1</label>
+<input class="form-control"  id="booktwo" type="number" name="" placeholder="marks">
+</div>
+
+<div class="bookm2 mb-3">
+<input class="form-control"  id="booktwom" type="number" name="" placeholder="maximum marks">
+</div>
+
+<div class="book3 mb-3">
+<label>English 2</label>
+<input class="form-control"  id="bookthree" type="number" name="" placeholder="marks">
+</div>
+
+<div class="bookm3 mb-3">
+<input class="form-control"  id="bookthreem" type="number" name="" placeholder="maximum marks">
+</div>
+
+<div class="book4 mb-3">
+<label>Hindi</label>
+<input class="form-control"  id="bookfour" type="number" name="" placeholder="marks">
+</div>
+
+<div class="bookm4 mb-3">
+<input class="form-control"  id="bookfourm" type="number" name="" placeholder="maximum marks">
+</div>
+
+<div class="book5 mb-3">
+<label>History & civics</label>
+<input class="form-control"  id="bookfive" type="number" name="" placeholder="marks">
+</div>
+
+<div class="bookm5 mb-3">
+<input class="form-control"  id="bookfivem" type="number" name="" placeholder="maximum marks">
+</div>
+
+<div class="book6 mb-3">
+<label>Geography</label>
+<input class="form-control"  id="booksix" type="number" name="" placeholder="marks">
+</div>
+
+<div class="bookm6 mb-3">
+<input class="form-control"  id="booksixm" type="number" name="" placeholder="maximum marks">
+</div>
+
+<div class="book7 mb-3">
+<label>Maths</label>
+<input class="form-control"  id="bookseven" type="number" name="" placeholder="marks">
+</div>
+
+<div class="bookm7 mb-3">
+<input class="form-control"  id="booksevenm" type="number" name="" placeholder="maximum marks">
+</div>
+
+<div class="book8 mb-3">
+<label>Physics</label>
+<input class="form-control"  id="bookeight" type="number" name="" placeholder="marks">
+</div>
+
+<div class="bookm8 mb-3">
+<input class="form-control"  id="bookeightm" type="number" name="" placeholder="maximum marks">
+</div>
+
+<div class="book9 mb-3">
+<label>Chemistry</label>
+<input class="form-control"  id="booknine" type="number" name="" placeholder="marks">
+</div>
+
+<div class="bookm9 mb-3">
+<input class="form-control"  id="bookninem" type="number" name="" placeholder="maximum marks">
+</div>
+
+<div class="book10 mb-3">
+<label>Biology</label>
+<input class="form-control"  id="bookten" type="number" name="" placeholder="marks">
+</div>
+
+<div class="bookm10 mb-3">
+<input class="form-control"  id="booktenm" type="number" name="" placeholder="maximum marks">
+</div>
+
+</div>
+<div>
+<button class="btn btn-warning col-12" onclick="return calculate()">Calculate</button>
+</div>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p style="color:white;">.</p>
+<p style="color:white;">.</p>
+<p style="color:white;">.</p>
+<p style="color:grey" >Programmed by Karan Singh</p>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<a href="https://twitter.com/karansingh_ind" class="fa fa-twitter"></a>
+<a>           </a>
+<a href="https://github.com/karansingh-in" class="fa fa-github"></a>
+ <p style="color:grey"><a href="mailto:karannsinggh@gmail.com">Want a website for yourself?</a></p>
+ 
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+		</div>
+
+		<div class="col-md-4 d-flex align-items-center">
+			<div>
+				<table class="table table-bordered border-dark">
+<tr>
+<td>You Scored:</td>
+<td id="score"></td>
+</tr>
+<!/table>
+
+<table class="table table-bordered border-dark">
+<tr>
+<td>Out Of:</td>
+<td id="all"></td>
+</tr>
+<!/table>
+<!/div>
+
+
+<!div>
+<table class="table table-bordered border-dark">
+<tr>
+<td>Percentage:</td>
+<td id="per"></td>
+</tr>
+</table>
+<!/div>
+
+
+
+		</div>
+	</div>
+	
+		
+		
+
+
+
+
+<script type="text/javascript" src="perrr.js"></script>
+
+
+
+
+
+
+
+<footer>
+    <ul class="footer-icons">
+        <li class="footerIcon"><a href="https://steamcommunity.com/id/madhavbanka"target="_blank"><i class="fab fa-github"></i></a></li>
+ <li class="footerIcon"><a href="https://twitter.com/madhavbanka_"target="_blank"><i class="fab fa-twitter"></i></a></li>
+<li class="footerIcon"><a href="https://www.linkedin.com/in/madhav-banka-705697235/"target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+<li class="footerIcon"><a href="mailto:madhavbankaytchannel@gmail.com"target="_blank"><i class="far fa-envelope"></i></a></li>
+    </ul>
+    <div>Batman 🦇</div>
+</footer>
+</body>
+
+</html> 
+
+
