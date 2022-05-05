@@ -1,10 +1,17 @@
-{
+body{
 	margin: 0;
 padding: 0;
 box-sixing: border-box;
 }
 body{
-	background: $fcfcfc;
+	background: black;
+ }
+ label {
+	cursor: pointer;
+	color: white;
+	display: block;
+	padding: 10px;
+	margin: 3px;
 }
 footer{
 	position:  absolute;
@@ -54,7 +61,7 @@ footer{
 }
 .socials a i{
 	font-size: 1.1rem;
-	transition color .4s ease;
+	
 }
 .socials a:hover i{
 	color: aqua;
