@@ -1,255 +1,182 @@
 <!DOCTYPE html>
-<html lang="eg">
+<html class="dark">
+
 <head>
-
-	
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- add it to the head section of the html file -->
-<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-rel="stylesheet">
-
-
-<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-<title>Percecal</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Percecal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+        }
+      }
+    }
+  </script>
 </head>
-<body style="background-color: #1C2833 !important">
-	<section class="text-gray-400 bg-gray-900 body-font">
-		<div class="container px-5 py-0 mx-auto">
-		  <div class="flex flex-col text-center w-full mb-10">
-			<h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Percentage-Calculator</h1>
-			
-		  </div>
-		  <div class="flex flex-wrap -m-4">
-		   
-		   
-		   
-			</div>
-		 
-			</div>
-<hr>
-<hr>
+
+<body class="bg-white dark:bg-gray-900">
+  <div class="flex justify-center">
+    <h1 class="m-5 mt-10 text-2xl sm:text-3xl md:text-5xl lg:text-6xl  font-bold text-gray-900 dark:text-white">
+      Percentage Calculator
+      <button id="themeBtn" onclick="toggleTheme()"
+        class="m-auto px-2 py-2 font-medium text-xs text-white capitalize transition-colors duration-200 transform bg-blue-600 rounded-md hover:bg-blue">
+        ☀️
+      </button>
+    </h1>
+  </div>
+  <div class="p-8">
+    <section class="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+    <div class="flex justify-center">
+      <h2 id="per" class="text-5xl font-bold text-gray-700 capitalize dark:text-white"></h2>
+      <span class="text-small text-gray-700 capitalize dark:text-white">%</span>
+    </div>
+    <div class="flex justify-center">
+    <h2 id="score" class="text-lg text-center font-semibold text-gray-700 capitalize dark:text-white"></h2> 
+    <span class="text-small text-gray-700 capitalize dark:text-white">/</span>
+    <h2 id="all" class="text-lg text-center font-semibold text-gray-700 capitalize dark:text-white"></h2>
+    </div>
+    <div>
+      <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2">
+          <label class="text-sm text-gray-700 dark:text-gray-200" for="marks-1">Computer</label>
+          <input id="bookone" type="number"
+            class="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          <label class="text-sm text-gray-700 dark:text-gray-200" for="max-marks-1">Max Marks</label>
+          <input id="bookonem" type="number"
+            class="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2">
+          <label class="text-sm text-gray-700 dark:text-gray-200" for="marks-2">English 1</label>
+          <input id="booktwo" type="number"
+            class="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          <label class="text-sm text-gray-700 dark:text-gray-200" for="max-marks-2">Max Marks</label>
+          <input id="booktwom" type="number"
+            class="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2">
+          <label class=" text-sm text-gray-700 dark:text-gray-200" for="marks-3">English 2</label>
+          <input id="bookthree" type="number"
+            class="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          <label class="text-sm text-gray-700 dark:text-gray-200" for="max-marks-3">Max Marks</label>
+          <input id="bookthreem" type="number"
+            class=" text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2">
+          <label class="text-sm text-gray-700 dark:text-gray-200" for="marks-4">Hindi</label>
+          <input id="bookfour" type="number"
+            class="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          <label class="text-sm text-gray-700 dark:text-gray-200" for="max-marks-4">Max Marks</label>
+          <input id="bookfourm" type="number"
+            class="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2">
+          <label class="text-sm text-gray-700 dark:text-gray-200" for="marks-5">History & Civics</label>
+          <input id="bookfive" type="number"
+            class="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          <label class="text-sm text-gray-700 dark:text-gray-200" for="max-marks-5">Max Marks</label>
+          <input id="bookfivem" type="number"
+            class="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2">
+          <label class="text-sm text-gray-700 dark:text-gray-200" for="marks-6">Geography</label>
+          <input id="booksix" type="number"
+            class="block w-full text-sm px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          <label class="text-gray-700 text-sm dark:text-gray-200" for="max-marks-6">Max Marks</label>
+          <input id="booksixm" type="number"
+            class="block w-full px-4 py-2 mt-2 text-sm text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2">
+          <label class="text-gray-700 dark:text-gray-200 text-sm " for="marks-7">Maths</label>
+          <input id="bookseven" type="number"
+            class="block w-full px-4 py-2 mt-2 text-gray-700 text-sm bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          <label class="text-gray-700 text-sm dark:text-gray-200" for="max-marks-7">Max Marks</label>
+          <input id="booksevenm" type="number"
+            class="block w-full px-4 py-2 mt-2 text-sm text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2">
+          <label class="text-gray-700 text-sm dark:text-gray-200" for="marks-8">Physics</label>
+          <input id="bookeight" type="number"
+            class="block w-full px-4 text-sm py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          <label class="text-gray-700 text-sm dark:text-gray-200" for="max-marks-8">Max Marks</label>
+          <input id="bookeightm" type="number"
+            class="block w-full px-4 py-2 mt-2 text-sm text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2">
+          <label class="text-gray-700 dark:text-gray-200 text-sm " for="marks-9">Chemistry</label>
+          <input id="booknine" type="number"
+            class="block w-full px-4 py-2 mt-2 text-gray-700 text-sm  bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          <label class="text-gray-700 dark:text-gray-200 text-sm " for="max-marks-9">Max Marks</label>
+          <input id="bookninem" type="number"
+            class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white text-sm  border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2">
+          <label class="text-sm text-gray-700 dark:text-gray-200" for="marks-10">Biology</label>
+          <input id="bookten" type="number"
+            class="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          <label class="text-sm text-gray-700 dark:text-gray-200" for="max-marks-10">Max Marks</label>
+          <input id="booktenm" type="number"
+            class="text-sm block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+        </div>
 
 
+      </div>
 
+      <div class="flex justify-end mt-6">
+        <button id="calculateBtn" onclick="calculate()"
+          class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">✔️ Calculate</button>
+      </div>
+    </div>
+  </section>
+  </div>
 
+  <footer class="mt-20 flex flex-col items-center justify-between px-6 py-4 bg-white dark:bg-gray-900 sm:flex-row">
+    <a href="#"
+      class="text-xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">karansingh-in</a>
 
+    <p class="py-2 text-gray-800 dark:text-white sm:py-0">Made with ❤ by Karan:)</p>
 
+    <div class="flex -mx-2">
+      <a href="mailto:karannsinggh@gmail.com" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+        aria-label="Gmail">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z">
+          </path>
+        </svg>
+      </a>
 
-<div class="row">
-	<div class="col-lg-8 bg-#1C2833 p-5 col-md-12 m-auto d-flex justify-content-around">
-		<div class="col-md-4">
-			<div>
-<div>
+      <a href="https://www.twitter.com/karansingh_ind" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+        aria-label="Twitter">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z">
+          </path>
+        </svg>
+      </a>
 
-<div class="book1 mb-3">
-<label style="color:white">Computer</label>
-<input class="form-control"  id="bookone" type="number" name="" placeholder="marks">
-</div>
-
-<div class="bookm1 mb-3">
-<input class="form-control"  id="bookonem" type="number" name="" placeholder="maximum marks">
-</div>
-
-
-<div class="book2 mb-3">
-<label style="color:white">English 1</label>
-<input class="form-control"  id="booktwo" type="number" name="" placeholder="marks">
-</div>
-
-<div class="bookm2 mb-3">
-<input class="form-control"  id="booktwom" type="number" name="" placeholder="maximum marks">
-</div>
-
-<div class="book3 mb-3">
-<label style="color:white">English 2</label>
-<input class="form-control"  id="bookthree" type="number" name="" placeholder="marks">
-</div>
-
-<div class="bookm3 mb-3">
-<input class="form-control"  id="bookthreem" type="number" name="" placeholder="maximum marks">
-</div>
-
-<div class="book4 mb-3">
-<label style="color:white">Hindi</label>
-<input class="form-control"  id="bookfour" type="number" name="" placeholder="marks">
-</div>
-
-<div class="bookm4 mb-3">
-<input class="form-control"  id="bookfourm" type="number" name="" placeholder="maximum marks">
-</div>
-
-<div class="book5 mb-3">
-<label style="color:white">History & civics</label>
-<input class="form-control"  id="bookfive" type="number" name="" placeholder="marks">
-</div>
-
-<div class="bookm5 mb-3">
-<input class="form-control"  id="bookfivem" type="number" name="" placeholder="maximum marks">
-</div>
-
-<div class="book6 mb-3">
-<label style="color:white">Geography</label>
-<input class="form-control"  id="booksix" type="number" name="" placeholder="marks">
-</div>
-
-<div class="bookm6 mb-3">
-<input class="form-control"  id="booksixm" type="number" name="" placeholder="maximum marks">
-</div>
-
-<div class="book7 mb-3">
-<labe style="color:white"l>Maths</label>
-<input class="form-control"  id="bookseven" type="number" name="" placeholder="marks">
-</div>
-
-<div class="bookm7 mb-3">
-<input class="form-control"  id="booksevenm" type="number" name="" placeholder="maximum marks">
-</div>
-
-<div class="book8 mb-3">
-<label style="color:white">Physics</label>
-<input class="form-control"  id="bookeight" type="number" name="" placeholder="marks">
-</div>
-
-<div class="bookm8 mb-3">
-<input class="form-control"  id="bookeightm" type="number" name="" placeholder="maximum marks">
-</div>
-
-<div class="book9 mb-3">
-<label style="color:white">Chemistry</label>
-<input class="form-control"  id="booknine" type="number" name="" placeholder="marks">
-</div>
-
-<div class="bookm9 mb-3">
-<input class="form-control"  id="bookninem" type="number" name="" placeholder="maximum marks">
-</div>
-
-<div class="book10 mb-3">
-<label style="color:white">Biology</label>
-<input class="form-control"  id="bookten" type="number" name="" placeholder="marks">
-</div>
-
-<div class="bookm10 mb-3">
-<input class="form-control"  id="booktenm" type="number" name="" placeholder="maximum marks">
-</div>
-
-</div>
-<div>
-<button class="btn btn-warning col-12" onclick="calculate()">Calculate</button>
-<p style="color:#1C2833">.</p>
-<p style="color:#1C2833">.</p>
-<p style="color:#1C2833">.</p>
-<p style="color:#1C2833">.</p>
-<p style="color:#1C2833">.</p>
-<p style="color:#1C2833">.</p>
-<p style="color:#1C2833">.</p>
-<p style="color:#1C2833">.</p>
-<p style="color:#1C2833">.</p>
-
-<footer class="text-gray-400 bg-gray-900 body-font">
-	<div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-	  <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
-		
-		
-	  </a>
-	  <p style="text-align:left" class="ml-1 text-s" style="color:grey">ℹ This page calculates your % according to the top 5 subjects rule by taking average of groups like hcg,pcb,english.</p>
-	  
-	  <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-		  
-		<p style="font-size:small" class="ml-1 text-s" style="color:white" >@karansingh-in</p>
-		
-  
-		<a href="https://twitter.com/karansingh_ind" class="ml-3 text-gray-400">
-		  <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-			<path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-		  </svg>
-		</a>
-  
-		<a href="https://instagram.com/isitkaran" class="ml-3 text-gray-400">
-		  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-			<rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-			<path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-		  </svg>
-		</a>
-		
-		<a href="https://github.com/karansingh-in" class="ml-3 text-gray-400">
-		  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-			<path stroke="none" d="M12 .300c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
-			<circle cx="4" cy="4" r="2" stroke="none"></circle>
-		  </svg>
-		</a>
-	  </span>
-	</div>
+      <a href="https://www.github.com/karansingh-in" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+        aria-label="Github">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+          </path>
+        </svg>
+      </a>
+    </div>
   </footer>
-  
-</div>
-
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-</div>
-
-
-		</div>
-
-		<div class="col-md-4 d-flex align-items-center">
-			<div>
-				<table class="table table-bordered border-white">
-<tr>
-<td style="color:white">You Scored:</td>
-<td style="color:white" id="score"></td>
-</tr>
-
-
-<table class="table table-bordered border-white">
-<tr>
-<td style="color:white">Out Of:</td>
-<td style="color:white" id="all"></td>
-</tr>
-
-
-
-
-
-<table class="table table-bordered border-white">
-<tr>
-<td style="color:white">Percentage:</td>
-<td style="color:white" id="per"></td>
-</tr>
-</table>
-
-
-
-
-		</div>
-	</div>
-	
-		
-		
-
-
-
-
-	
-
-<script type="text/javascript" src="script.js"></script>
-
-
-
-
-
-
-
-<hr>
-
+  <script src="script.js"></script>
 </body>
 
-</html> 
-
-
+</html>
