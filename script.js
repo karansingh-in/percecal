@@ -1,3 +1,22 @@
+var dark = true;
+
+const toggleTheme = (e) => {
+    let themeBtn = document.getElementById("themeBtn");
+    if(dark){
+      themeBtn.innerHTML = "🌙";
+      document.documentElement.classList.remove("dark");
+    }else{
+      themeBtn.innerHTML = "☀️";
+      document.documentElement.classList.add("dark");
+    }
+    dark=!dark;
+  }
+
+document.onload = () => {
+  
+}
+
+
 function calculate(){
 
 var cs=parseFloat(document.getElementById('bookone').value);
@@ -83,8 +102,8 @@ const per=(total/mtotal) * 100;
 //document.getElementById("obtain").innerHTML=obtain;
 //var per=(total/210)*100;
 document.getElementById("per").innerHTML=per.toFixed(2)+"%";
-document.getElementById("score").innerHTML=total;
-document.getElementById("all").innerHTML=mtotal;
+document.getElementById("score").innerHTML=total.toFixed(2);
+document.getElementById("all").innerHTML=mtotal.toFixed(2);
 }
 return false;
 }
