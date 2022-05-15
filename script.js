@@ -3,10 +3,10 @@ var dark = true;
 const toggleTheme = (e) => {
     let themeBtn = document.getElementById("themeBtn");
     if(dark){
-      themeBtn.innerHTML = "🌙";
+      themeBtn.innerHTML = "☀️";
       document.documentElement.classList.remove("dark");
     }else{
-      themeBtn.innerHTML = "☀️";
+      themeBtn.innerHTML = "🌙";
       document.documentElement.classList.add("dark");
     }
     dark=!dark;
@@ -49,6 +49,8 @@ var mhc=parseFloat(document.getElementById('bookfivem').value);
 var g=parseFloat(document.getElementById('booksix').value);
 var mg=parseFloat(document.getElementById('booksixm').value);
 
+	
+	
 if(cs>mcs || p>mp ||c>mc ||b>mb ||m>mm ||h>mh ||hc>mhc ||g>mg ||e1>me1 ||e2>me2 ){
 alert("Please enter the correct marks!")
 }
